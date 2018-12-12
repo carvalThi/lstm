@@ -32,7 +32,7 @@ tf.logging.set_verbosity(tf.logging.ERROR)
 def main():
     parser = argparse.ArgumentParser(
                         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument('--data_dir', type=str, default='data/tinyshakespeare',
+    parser.add_argument('--data_dir', type=str, default='inputFolder',
                         help='data directory containing input.txt')
     parser.add_argument('--save_model', type=str, default='models',
                         help='directory to store the ml5js model')
@@ -40,17 +40,17 @@ def main():
                         help='directory to store checkpointed models')
     parser.add_argument('--log_dir', type=str, default='logs',
                         help='directory to store tensorboard logs')
-    parser.add_argument('--rnn_size', type=int, default=128,
+    parser.add_argument('--rnn_size', type=int, default=512,
                         help='size of RNN hidden state')
-    parser.add_argument('--num_layers', type=int, default=2,
+    parser.add_argument('--num_layers', type=int, default=3,
                         help='number of layers in the RNN')
     parser.add_argument('--model', type=str, default='lstm',
                         help='rnn, gru, lstm, or nas')
-    parser.add_argument('--batch_size', type=int, default=50,
+    parser.add_argument('--batch_size', type=int, default=65,
                         help='minibatch size')
-    parser.add_argument('--seq_length', type=int, default=50,
+    parser.add_argument('--seq_length', type=int, default=128,
                         help='RNN sequence length')
-    parser.add_argument('--num_epochs', type=int, default=50,
+    parser.add_argument('--num_epochs', type=int, default=100,
                         help='number of epochs')
     parser.add_argument('--save_every', type=int, default=1000,
                         help='save frequency')
