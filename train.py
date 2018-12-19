@@ -40,7 +40,7 @@ def main():
                         help='directory to store checkpointed models')
     parser.add_argument('--log_dir', type=str, default='logs',
                         help='directory to store tensorboard logs')
-    parser.add_argument('--rnn_size', type=int, default=512,
+    parser.add_argument('--rnn_size', type=int, default=256,
                         help='size of RNN hidden state')
     parser.add_argument('--num_layers', type=int, default=2,
                         help='number of layers in the RNN')
@@ -50,7 +50,7 @@ def main():
                         help='minibatch size')
     parser.add_argument('--seq_length', type=int, default=128,
                         help='RNN sequence length')
-    parser.add_argument('--num_epochs', type=int, default=100,
+    parser.add_argument('--num_epochs', type=int, default=70,
                         help='number of epochs')
     parser.add_argument('--save_every', type=int, default=1000,
                         help='save frequency')
