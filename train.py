@@ -59,7 +59,7 @@ def main():
                         help='learning rate')
     parser.add_argument('--decay_rate', type=float, default=0.97,
                         help='decay rate for rmsprop')
-    parser.add_argument('--output_keep_prob', type=float, default=0.8,
+    parser.add_argument('--output_keep_prob', type=float, default=1.0,
                         help='probability of keeping weights in the hidden layer')
     parser.add_argument('--input_keep_prob', type=float, default=1.0,
                         help='probability of keeping weights in the input layer')
