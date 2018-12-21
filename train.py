@@ -41,13 +41,13 @@ def main():
                         help='directory to store tensorboard logs')
     parser.add_argument('--rnn_size', type=int, default=512,
                         help='size of RNN hidden state')
-    parser.add_argument('--num_layers', type=int, default=3,
+    parser.add_argument('--num_layers', type=int, default=2,
                         help='number of layers in the RNN')
     parser.add_argument('--model', type=str, default='lstm',
                         help='rnn, gru, lstm, or nas')
     parser.add_argument('--batch_size', type=int, default=75,
                         help='minibatch size')
-    parser.add_argument('--seq_length', type=int, default=150,
+    parser.add_argument('--seq_length', type=int, default=280,
                         help='RNN sequence length')
     parser.add_argument('--num_epochs', type=int, default=75,
                         help='number of epochs')
@@ -59,7 +59,7 @@ def main():
                         help='learning rate')
     parser.add_argument('--decay_rate', type=float, default=0.97,
                         help='decay rate for rmsprop')
-    parser.add_argument('--output_keep_prob', type=float, default=1.0,
+    parser.add_argument('--output_keep_prob', type=float, default=0.8,
                         help='probability of keeping weights in the hidden layer')
     parser.add_argument('--input_keep_prob', type=float, default=1.0,
                         help='probability of keeping weights in the input layer')
